@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calduladora de IMC</title>
+    </head>
+    <body>
+        <div class="container">
+            <div id="calc-container">
+                <h2>Caluladora de IMC (Indice de Massa Corporal)</h2>
+                <form id="imc-form">
+                    <div class="form-group">
+                        <label for="altura">Altura:</label>
+                        <input type="text" name="altura" id="altura" class="form-control" placeholder="Exemplo: 1,70" maxlength="4" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="peso">Peso:</label>
+                        <input type="text" name="peso" id="peso" class="form-control" placeholder="Exemplo: 90,5" minlength="2" maxlength="4" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="calc-btn">Calcular</button>
+                        <button type="reset" id="limpar-btn">Limpar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="resultado">
+                <p id="imc-number">Seu IMC: <span></span></p>
+                <p id="imc-info">Situação atual: <span></span></p>
+                <h3>lassificações</h3>
+                <div id="tabela-imc">
+                    <div class="theader">
+                        <h4>IMC</h4>
+                        <h4>Classificação</h4>
+                        <h4>Obesidade</h4>
+                    </div>
+                </div>
+                <button id="voltar">Voltar</button>
+            </div>
+        </div>
+    </body>
+</html>
