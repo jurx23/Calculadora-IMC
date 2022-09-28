@@ -5,38 +5,42 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Calduladora de IMC</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        <div class="container">
+        <div class="container dark border shadow p-3 mb-5 bg-white rounded">
             <div id="calc-container">
                 <h2>Caluladora de IMC (Indice de Massa Corporal)</h2>
                 <form id="imc-form">
-                    <div class="form-group">
-                        <label for="altura">Altura:</label>
-                        <input type="text" name="altura" id="altura" class="form-control" placeholder="Exemplo: 1,70" maxlength="4" required>
+                    <div class="form-inputs">
+                        <div class="form-group">
+                            <label for="altura">Altura:</label>
+                            <input type="text" name="altura" id="altura" class="form-control" placeholder="Exemplo: 1,70" minlength="4" maxlength="4" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="peso">Peso:</label>
+                            <input type="text" name="peso" id="peso" class="form-control" placeholder="Exemplo: 90,5" minlength="2" maxlength="4" required>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="peso">Peso:</label>
-                        <input type="text" name="peso" id="peso" class="form-control" placeholder="Exemplo: 90,5" minlength="2" maxlength="4" required>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" id="calc-btn">Calcular</button>
-                        <button type="reset" id="limpar-btn">Limpar</button>
+                    <div class="action-control">
+                        <button type="submit" id="calc-btn" class="btn btn-primary">Calcular</button>
+                        <button type="reset" id="clear-btn" class="btn btn-warning">Limpar</button>
                     </div>
                 </form>
             </div>
-            <div class="resultado">
+            <div id="result-container" class="hide">
                 <p id="imc-number">Seu IMC: <span></span></p>
                 <p id="imc-info">Situação atual: <span></span></p>
-                <h3>lassificações</h3>
-                <div id="tabela-imc">
-                    <div class="theader">
+                <h3>Classificações</h3>
+                <div id="imc-table">
+                    <div class="table-header">
                         <h4>IMC</h4>
                         <h4>Classificação</h4>
                         <h4>Obesidade</h4>
                     </div>
                 </div>
-                <button id="voltar">Voltar</button>
+                <button id="voltar" class="btn btn-primary">Voltar</button>
             </div>
         </div>
     </body>
